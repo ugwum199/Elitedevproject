@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .error-message {
+      color: red;
+    }
+  </style>
+  <script>
+    function validateLogin() {
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+
+      // Check if login credentials are correct
+      if (email === "uobis@gmail.com" && password === "12345678") {
+        // Display success message
+        alert("Login Successfully");
+        // Redirect to Dashboard page
+        window.location.href = "dashboard.html";
+      } else {
+        // Display error message
+        alert("Invalid credentials. Please try again.");
+      }
+    }
+  </script>
+</head>
+<body style="background-image: url(1st\ bg.jpg); background-size: contain;">
+  <div class="container">
+    <h2 style="color: white;">Login</h2>
+    <form style="color: white;">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br><br>
+
+      <input type="button" value="Login" onclick="validateLogin()">
+    </form>
+    <br><br><a href="homepage.html" class="button" style="color: white;">Home</a>
+  </div>
+
+  
+</body>
+</html>
